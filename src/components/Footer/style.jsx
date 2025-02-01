@@ -6,6 +6,7 @@ const FooterStyle = styled.footer`
   justify-content: space-evenly;
   height: 69px;
   margin: auto;
+  padding: 8px 24px 0 0;
   h3 {
     color: var(--theme-color);
     font-size: 1.5rem;
@@ -13,7 +14,6 @@ const FooterStyle = styled.footer`
 
   ul {
     display: flex;
-    align-items: center;
 
     li {
       &:hover {
@@ -25,7 +25,7 @@ const FooterStyle = styled.footer`
         display: flex;
         font-size: 2rem;
         padding: 4px 4px;
-        margin-right: 8px;
+        margin-right: 4px;
         border-radius: 100%;
         color: var(--theme-color);
         &:hover {

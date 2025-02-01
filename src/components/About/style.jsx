@@ -38,7 +38,7 @@ const Info = styled.div`
       margin: 10px 0;
     }
     .cvbutton {
-      margin-top: 18px;
+      margin-top: 16px;
       border-radius: 20px;
       padding: 6px;
       font-size: 1.5rem;
