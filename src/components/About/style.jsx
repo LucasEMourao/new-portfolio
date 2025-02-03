@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const Info = styled.div`
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   padding: 0 16px;
   gap: 140px;
   
@@ -40,13 +40,16 @@ const Info = styled.div`
     .cvbutton {
       margin-top: 16px;
       border-radius: 20px;
-      padding: 6px;
+      padding: 8px 22px;
       font-size: 1.5rem;
       cursor: pointer;
       &:hover {
         background-color: var(--primary-color);
         transform: scale(1.05);
         transition: all 0.3s ease;
+      }
+      &:active{
+        transform: scale(0.95);
       }
       a {
         font-size: 1.5rem;

@@ -5,7 +5,6 @@ const FooterStyle = styled.footer`
   align-items: center;
   justify-content: space-evenly;
   height: 69px;
-  margin: auto;
   padding: 8px 24px 0 0;
   h3 {
     color: var(--theme-color);

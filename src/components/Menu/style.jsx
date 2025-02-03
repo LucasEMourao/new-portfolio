@@ -23,6 +23,9 @@ const Navigation = styled.nav`
         transform: scale(1.05);
         transition: all 0.3s ease;
       }
+      &:active {
+        transform: scale(0.95);
+      }
     }
   }
 

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Abilities = styled.main`
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -23,8 +24,7 @@ const AbilityCards = styled.section`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: row;
-  
+  flex-direction: row;  
 `;
 
 const AbilityCard = styled.div`
@@ -37,6 +37,7 @@ const AbilityCard = styled.div`
   width: 400px;
   height: 350px;
   cursor: default;
+  transition: ease 0.3s;
   &:hover {
     transform: scale(1.05);
     border-color: var(--primary-color);

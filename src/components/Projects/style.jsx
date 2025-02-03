@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const ProjectsMain = styled.main`
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -28,13 +29,17 @@ const SectionProjects = styled.section`
 `;
 
 const CardProjects = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
   margin: 32px;
   width: 250px;
   height: 320px;
   display: flex;
-  text-align: center;
   border-radius: 10px;
+  border: 1px solid var(--theme-color);
   opacity: 0.8;
+  transition: ease 0.3s;
   &:hover {
     transform: scale(1.05);
     background-color: var(--primary-color);
