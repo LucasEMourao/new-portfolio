@@ -2,17 +2,22 @@ import { createContext, useState } from "react";
 import { ThemeProvider as StyledProvider } from "styled-components";
 
 const LightTheme = {
-  background: "#4096cf;",
-  color: "#000",
+  background: "#F5F5F5",
+  color: "#121212",
+  primaryColor: "#022d7a", /* Cor primária ajustada para melhor contraste no tema claro */
 };
 
 const DarkTheme = {
-  background: "#000",
-  color: "#fff",
-  borderColor: "#fff",
+  background: "#121212",
+  color: "#FFFFFF",
+  borderColor: "#FFFFFF",
+  primaryColor: "#033ca5", /* Cor primária no tema escuro */
 };
 
-const ThemeContext = createContext({});
+const ThemeContext = createContext({
+  isDarkMode: false,
+  toggleTheme: () => {},
+});
 
 const ThemeContextProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);

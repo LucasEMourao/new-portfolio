@@ -1,7 +1,7 @@
-import adviceApp from "../../assets/images/advice-app.png";
-import github from "../../assets/images/github.png";
-import movieflix from "../../assets/images/movieflix.png";
-import pokedex from "../../assets/images/pokedex.png";
+import adviceApp from "../../assets/images/advice-app.webp";
+import github from "../../assets/images/github.webp";
+import movieflix from "../../assets/images/movieflix.webp";
+import pokedex from "../../assets/images/pokedex.webp";
 import { ProjectsMain, SectionProjects, CardProjects } from "./style";
 
 const Projects = () => {
@@ -30,10 +30,11 @@ const Projects = () => {
           <a
             target="_blank"
             href="https://github.com/LucasEMourao/desafio-fetch-github-api"
+            aria-label="Ver projeto Busca pelo API do Github no GitHub"
           >
             <div>
               <img src={github} alt="Projeto busca pelo API do GitHub" />
-              <h3>Projeto Busca pelo API do Github</h3>
+              <h3>Projeto Busca pela API do Github</h3>
               <p>Projeto feito com HTML, CSS e Javascript </p>
               <p>🔗 Ver repositório no GitHub</p>
             </div>
@@ -43,6 +44,7 @@ const Projects = () => {
           <a
             target="_blank"
             href="https://github.com/LucasEMourao/projeto-app-gerador-conselhos"
+            aria-label="Ver projeto Gerador de conselhos no GitHub"
           >
             <div>
               <img src={adviceApp} alt="Projeto app gerador de conselohs" />
@@ -56,6 +58,7 @@ const Projects = () => {
           <a
             target="_blank"
             href="https://github.com/LucasEMourao/quest-pokedex"
+            aria-label="Ver projeto Pokedex no GitHub"
           >
             <div>
               <img src={pokedex} alt="Projeto pokedex" />
@@ -69,6 +72,7 @@ const Projects = () => {
           <a
             target="_blank"
             href="https://github.com/LucasEMourao/movieflix-api"
+            aria-label="Ver projeto Movieflix API no GitHub"
           >
             <div>
               <img src={movieflix} alt="Projeto Movieflix" />

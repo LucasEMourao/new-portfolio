@@ -3,33 +3,36 @@ import styled from "styled-components";
 const FooterStyle = styled.footer`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  height: 69px;
-  padding: 8px 24px 0 0;
+  justify-content: space-around;
+  padding: 1.5rem 2rem;
+  background-color: var(--bgtheme-color);
+  border-top: 1px solid ${(props) => props.theme.borderColor || '#e0e0e0'};
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Transição suave */
+
   h3 {
     color: var(--theme-color);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   ul {
     display: flex;
+    gap: 1.5rem;
 
     li {
+      transition: all .3s ease;
+
       &:hover {
         transform: scale(1.15);
-        transition: all .3s ease;
       }
 
       a {
         display: flex;
         font-size: 2rem;
-        padding: 4px 4px;
-        margin-right: 4px;
-        border-radius: 100%;
         color: var(--theme-color);
+        transition: all .3s ease;
+
         &:hover {
           color: var(--primary-color);
-          transition: all .3s ease;
         }
       }
     }

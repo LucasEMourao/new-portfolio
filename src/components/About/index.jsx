@@ -30,7 +30,7 @@ const About = () => {
         </p>
 
         <div className="cvbutton">
-          <a href={cv} target="_blank">
+          <a href={cv} target="_blank" aria-label="Baixar currículo em PDF">
             <strong>Veja meu CV</strong>
           </a>
         </div>

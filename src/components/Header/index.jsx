@@ -6,7 +6,7 @@ import { Menu } from "../Menu/index.jsx";
 const Header = () => {
   return (
     <Container>
-      <Link to={"/"}>
+      <Link to={"/"} aria-label="Página inicial">
         <img src={logo} alt="Logo image" />
       </Link>
 

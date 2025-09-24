@@ -4,25 +4,44 @@ import styled from "styled-components";
 
 function ButtonThemeContext() {
   const { toggleTheme, isDarkMode } = useContext(ThemeContext);
+  const themeLabel = isDarkMode ? "Modo claro" : "Modo escuro";
+  
   return (
-    <ThemeSwitcher>
-      <button onClick={toggleTheme}>{isDarkMode ? "🌙" : "💡"}</button>
+    <ThemeSwitcher 
+      onClick={toggleTheme} 
+      aria-label={themeLabel}
+      aria-pressed={isDarkMode}
+    >
+      <span>{isDarkMode ? "🌙" : "💡"}</span>
     </ThemeSwitcher>
   );
 }
 
-const ThemeSwitcher = styled.div`
-  button {
-    border: none;
-    font-size: 36px;
-    border-radius: 50%;
-    cursor: pointer;
+const ThemeSwitcher = styled.button`
+  border: none;
+  font-size: 2rem; /* Ajustado o tamanho */
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Tamanho fixo */
+  height: 50px; /* Tamanho fixo */
+  background-color: transparent;
+  transition: all 0.3s ease;
 
-    &:hover {
-      opacity: 0.8;
-      transform: scale(1.05);
-      transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--primary-color);
+    transform: rotate(360deg); /* Efeito de rotação */
+
+    span {
+      transform: rotate(-360deg); /* Desfaz a rotação no ícone */
     }
+  }
+
+  span {
+    display: inline-block;
+    transition: transform 0.3s ease;
   }
 `;
 
