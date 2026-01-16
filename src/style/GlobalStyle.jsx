@@ -56,9 +56,15 @@ const GlobalStyle = createGlobalStyle`
     }
 
     :root{
-        --primary-color:${(props) => props.theme.primaryColor || '#022d7a'}; /* Usar a cor primária do tema, com fallback */
+        --primary-color:${(props) => props.theme.primaryColor || '#022d7a'};
         --theme-color:${(props) => props.theme.color};
         --bgtheme-color:${(props) => props.theme.background};
+        
+        /* New Semantic Tokens */
+        --sys-color-surface-main: ${(props) => props.theme.tokens?.color.surface.main || props.theme.background};
+        --sys-color-text-main: ${(props) => props.theme.tokens?.color.text.main || props.theme.color};
+        --sys-color-text-secondary: ${(props) => props.theme.tokens?.color.text.secondary || '#555'};
+        --sys-color-shadow-brand: ${(props) => props.theme.tokens?.color.shadow.brand || '#4096cf'};
     }
 `
 export default GlobalStyle;

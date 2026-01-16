@@ -26,7 +26,7 @@ const Menu = () => {
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -42,15 +42,15 @@ const Menu = () => {
       </label>
 
       <ul>
-        <Link to={"/"} onClick={closeMenu}>
-          <li>Sobre</li>
-        </Link>
-        <Link to={"/skills"} onClick={closeMenu}>
-          <li>Habilidades</li>
-        </Link>
-        <Link to={"/projects"} onClick={closeMenu}>
-          <li>Projetos</li>
-        </Link>
+        <li>
+          <Link to={"/"} onClick={closeMenu}>Sobre</Link>
+        </li>
+        <li>
+          <Link to={"/skills"} onClick={closeMenu}>Habilidades</Link>
+        </li>
+        <li>
+          <Link to={"/projects"} onClick={closeMenu}>Projetos</Link>
+        </li>
         <li>
           {/* O botão de tema não fecha o menu, pois não é uma navegação */}
           <ButtonThemeContext />

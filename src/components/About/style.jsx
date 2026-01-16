@@ -13,7 +13,7 @@ const Info = styled.div`
   padding: 6rem 2rem; /* Aumentado o padding vertical */
 
   figure {
-    box-shadow: inset 3px 3px 3px #4096cf, inset -3px -3px 3px #4096cf;
+    box-shadow: inset 3px 3px 3px var(--sys-color-shadow-brand), inset -3px -3px 3px var(--sys-color-shadow-brand);
     border-radius: 100%;
     max-width: 390px;
     max-height: 390px;

@@ -18,6 +18,14 @@ const Navigation = styled.nav`
       color: var(--theme-color);
       transition: all 0.3s ease;
 
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: block; /* Make the link fill the li for better click area */
+        width: 100%;
+        height: 100%;
+      }
+
       &:hover {
         color: var(--primary-color);
         transform: scale(1.05);
