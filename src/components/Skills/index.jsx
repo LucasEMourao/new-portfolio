@@ -1,11 +1,13 @@
 import {
-  FaGitAlt,
-  FaGithub,
   FaReact,
-  FaJs,
   FaHtml5,
   FaCss3Alt,
   FaNode,
+  FaGitAlt,
+  FaBrain,
+  FaNetworkWired,
+  FaServer,
+  FaLayerGroup
 } from "react-icons/fa6";
 import { BiLogoTypescript } from "react-icons/bi";
 import { Abilities, AbilityCards, AbilityCard, Info } from "./style";
@@ -13,100 +15,111 @@ import { Abilities, AbilityCards, AbilityCard, Info } from "./style";
 const Skills = () => {
   return (
     <Abilities>
-      <h2>Habilidades</h2>
+      <h2>Habilidades & Competências</h2>
       <p>
-        Sou um <strong>Desenvolvedor Full Stack Júnior</strong>, tenho
-        experiência em HTML, CSS, JavaScript, TypeScript e React. Confesso que
-        amei conhecer o React; é uma biblioteca muito interessante e legal de
-        trabalhar. Uso o Git como sistema de versionamento de código e mantenho
-        meus repositórios no GitHub. Também tenho conhecimentos em Node.js,
-        PostgreSQL, DBeaver e outras ferramentas/frameworks do backend, como
-        Express e Prisma, entre outros. Desenvolvo projetos individuais para
-        amigos e familiares próximos, sempre aplicando práticas de clean code e
-        responsividade, entregando o meu melhor.
+        Desenvolvedor FullStack com foco em <strong>Performance</strong>,{" "}
+        <strong>Arquitetura Escalável</strong> e <strong>Experiência do Usuário</strong>.
+        Minha abordagem combina rigor técnico no backend (Node/Postgres/Automação)
+        com interfaces reativas e acessíveis no frontend (React/Next.js/Framer).
       </p>
       <AbilityCards>
+        {/* Card 1: Frontend Architecture (HTML + CSS) */}
         <AbilityCard>
-          <FaHtml5 className="icon" />
+          <div style={{ display: 'flex', gap: '0.5rem', color: '#e34c26' }}>
+            <FaHtml5 className="icon" />
+            <FaCss3Alt className="icon" style={{ color: '#264de4' }} />
+          </div>
           <Info>
+            <h3>Frontend Architecture</h3>
             <p>
-              HTML, é a linguagem fundamental da web que estrutura e organiza o
-              conteúdo das páginas, permitindo a inclusão de textos, imagens e
-              links para uma navegação interativa.
+              Arquitetura Semântica, Acessibilidade (WAI-ARIA) e Design Systems escaláveis.
+              Foco em layouts performáticos (GPU-accelerated), responsividade fluida
+              e manutenção de estilos organizados via Styled-Components.
             </p>
           </Info>
         </AbilityCard>
+
+        {/* Card 2: React Ecosystem */}
         <AbilityCard>
-          <FaCss3Alt className="icon" />
+          <FaReact className="icon" style={{ color: '#61dafb' }} />
           <Info>
+            <h3>React Ecosystem</h3>
             <p>
-              CSS é uma linguagem de estilo que permite definir a apresentação
-              visual de documentos HTML, controlando aspectos como layout, cores
-              e fontes.
+              Gerenciamento de estado complexo, Hooks customizados e ciclos de vida.
+              Construção de interfaces SPA/Next.js focadas em reusabilidade,
+              performance de renderização e UX sofisticada.
             </p>
           </Info>
         </AbilityCard>
+
+        {/* Card 3: TypeScript Core */}
         <AbilityCard>
-          <FaJs className="icon" />
+          <BiLogoTypescript className="icon" style={{ color: '#3178c6' }} />
           <Info>
+            <h3>TypeScript Core</h3>
             <p>
-              JavaScript é uma linguagem de programação de tipagem fraca, que
-              permite a criação de páginas web interativas e dinâmicas, sendo
-              uma das principais tecnologias da web junto com HTML e CSS.
+              Desenvolvimento Type-Safe para garantir contratos de dados robustos
+              entre Frontend e Backend. Uso de Generics e Utility Types para
+              reduzir bugs em runtime e melhorar a manutenibilidade.
             </p>
           </Info>
         </AbilityCard>
+
+        {/* Card 4: Backend Engineering */}
         <AbilityCard>
-          <FaReact className="icon" />
+          <FaNode className="icon" style={{ color: '#339933' }} />
           <Info>
+            <h3>Backend Engineering</h3>
             <p>
-              React é uma biblioteca JS desenvolvida para construir interfaces
-              de usuário eficientes, permitindo a criação de componentes
-              reutilizáveis e alta performance.
+              APIs RESTful e arquiteturas assíncronas. Manipulação de processos
+              pesados (File System/Streams), interação com bancos de dados (Postgres)
+              e lógica de servidor segura e escalável.
             </p>
           </Info>
         </AbilityCard>
+
+        {/* Card 5: Automation & Orchestration */}
         <AbilityCard>
-          <BiLogoTypescript className="icon" />
+          <FaNetworkWired className="icon" style={{ color: '#ea4b71' }} />
           <Info>
+            <h3>Automation (n8n)</h3>
             <p>
-              TypeScript é uma linguagem de programação de código que atua como
-              em conjunto do JavaScript, adicionando tipagem forte e recursos
-              avançados para facilitar o desenvolvimento de aplicações robustas
-              e escaláveis.
+              Arquiteturas orientadas a eventos e Webhooks. Orquestração de workflows
+              assíncronos complexos, tratamento de erros resiliente e integração
+              de sistemas isolados para automação de processos críticos.
             </p>
           </Info>
         </AbilityCard>
+
+        {/* Card 6: Applied AI Integration */}
         <AbilityCard>
-          <FaGitAlt className="icon" />
+          <FaBrain className="icon" style={{ color: '#9b59b6' }} />
           <Info>
+            <h3>Applied AI Integration</h3>
             <p>
-              Git é um sistema de controle de versões distribuído, criado em
-              2005, e permite o gerenciamento eficiente de alterações em
-              arquivos e colaboração entre desenvolvedores.
+              Integração determinística de LLMs em sistemas de produção.
+              Engenharia de prompt para outputs estruturados (JSON),
+              validação de dados de entrada/saída e uso de IA como componente lógico funcional.
             </p>
           </Info>
         </AbilityCard>
+
+        {/* Card 7: DevOps & Workflow */}
         <AbilityCard>
-          <FaGithub className="icon" />
+          <div style={{ display: 'flex', gap: '0.5rem', color: '#f05032' }}>
+            <FaGitAlt className="icon" />
+            <FaServer className="icon" style={{ color: 'var(--theme-color)' }} />
+          </div>
           <Info>
+            <h3>DevOps & Workflow</h3>
             <p>
-              GitHub é uma plataforma de hospedagem de código-fonte que utiliza
-              o sistema de controle de versão Git, permitindo a colaboração
-              entre desenvolvedores em projetos de software.
+              CI/CD e Versionamento Semântico (Git). Gestão de fluxo de trabalho
+              colaborativo, Code Reviews rigorosos e manutenção de histórico
+              limpo para entregas contínuas e seguras.
             </p>
           </Info>
         </AbilityCard>
-        <AbilityCard>
-          <FaNode className="icon" />
-          <Info>
-            <p>
-              Node.js é um ambiente de execução JavaScript de código aberto e
-              multiplataforma que permite a criação de aplicações escaláveis e
-              rápidas no lado do servidor.
-            </p>
-          </Info>
-        </AbilityCard>
+
       </AbilityCards>
     </Abilities>
   );

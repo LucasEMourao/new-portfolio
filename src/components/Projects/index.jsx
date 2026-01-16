@@ -1,6 +1,6 @@
-import movieflix from "../../assets/images/movieflix.webp";
-import openCutPipeline from "../../assets/images/opencut-pipeline.png";
-import n8nPipeline from "../../assets/images/n8n-pipeline.png";
+import botflix from "../../assets/images/botflix.png";
+import n8nPipeline from "../../assets/images/n8n-workflow.png";
+import openCut from "../../assets/images/opencut.png";
 import {
   ProjectsMain,
   SectionFeatures,
@@ -30,7 +30,7 @@ const Projects = () => {
           rel="noreferrer"
         >
           <MediaContainer>
-            <img src={openCutPipeline} alt="OpenCut AI Pipeline Diagram" />
+            <img src={openCut} alt="OpenCut AI Pipeline Diagram" />
           </MediaContainer>
           <ContentContainer>
             <Badge>System Architecture</Badge>
@@ -49,7 +49,7 @@ const Projects = () => {
               <span>Next.js 15</span>
               <span>Bun Runtime</span>
               <span>Native FFmpeg</span>
-              <span>Gemini 1.5 Pro</span>
+              <span>Gemini 2.5 Flash</span>
               <span>Turborepo</span>
             </TechList>
             <div>
@@ -74,7 +74,7 @@ const Projects = () => {
               rel="noreferrer"
             >
               <div className="image-wrapper">
-                <img src={movieflix} alt="Botflix Pro Interface" />
+                <img src={botflix} alt="Botflix Pro Interface" />
               </div>
               <div className="content">
                 <Badge>Product UX & AI Agent</Badge>
