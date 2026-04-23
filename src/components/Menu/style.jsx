@@ -8,30 +8,55 @@ const Navigation = styled.nav`
   ul {
     display: flex;
     align-items: center;
-    gap: 1.5rem; /* Adicionado gap para espaçamento */
+    gap: 1rem;
 
     li {
-      padding: 0.5rem;
-      font-size: 1.25rem; /* Ajustado o tamanho da fonte */
+      padding: 0.25rem;
+      font-size: 1.05rem;
       font-weight: 700;
       cursor: pointer;
       color: var(--theme-color);
-      transition: all 0.3s ease;
+      transition: color 0.3s ease, transform 0.3s ease;
 
       a {
         text-decoration: none;
         color: inherit;
-        display: block; /* Make the link fill the li for better click area */
-        width: 100%;
-        height: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0.65rem 0.95rem;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        transition:
+          color 0.3s ease,
+          background-color 0.3s ease,
+          border-color 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      a.active {
+        color: var(--primary-color);
+        background: ${(props) =>
+          props.theme.background === "#F5F5F5"
+            ? "rgba(2, 45, 122, 0.08)"
+            : "rgba(255, 255, 255, 0.06)"};
+        border-color: ${(props) =>
+          props.theme.background === "#F5F5F5"
+            ? "rgba(2, 45, 122, 0.14)"
+            : "rgba(255, 255, 255, 0.14)"};
       }
 
       &:hover {
         color: var(--primary-color);
-        transform: scale(1.05);
       }
+
+      &:hover a {
+        transform: translateY(-1px);
+      }
+
       &:active {
-        transform: scale(0.95);
+        transform: scale(0.98);
       }
     }
   }
@@ -48,7 +73,7 @@ const Navigation = styled.nav`
     position: relative;
     display: block;
     width: 30px;
-    height: 3px; /* Aumentada a espessura */
+    height: 3px;
     top: 29px;
     left: 15px;
     transition: 0.5s ease-in-out;
@@ -73,7 +98,6 @@ const Navigation = styled.nav`
     }
   }
 
-  /* Estilos para o ícone de fechamento (X) */
   input:checked ~ label .hamburguer {
     transform: rotate(45deg);
   }
@@ -89,56 +113,66 @@ const Navigation = styled.nav`
   }
 
   @media (max-width: 900px) {
-    position: static; /* Alterado para static */
+    position: static;
 
     label {
       z-index: 11;
-      display: block; /* Garantir que o label seja exibido */
-      position: relative; /* Garantir que o z-index funcione */
+      display: block;
+      position: relative;
     }
 
     ul {
-      position: fixed; /* Alterado para fixed */
+      position: fixed;
       top: 0;
-      right: -300px; /* Começa fora da tela */
-      width: 250px; /* Aumentada a largura */
+      right: -300px;
+      width: min(280px, 78vw);
       height: 100vh;
-      flex-direction: column; /* Itens em coluna */
-      justify-content: center; /* Centraliza verticalmente */
-      gap: 2rem; /* Espaçamento entre os itens */
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.25rem;
       background-color: var(--bgtheme-color);
       padding: 2rem;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-      transition: right 0.4s ease; /* Transição suave */
-      display: flex; /* Mantém flexível */
+      box-shadow: -12px 0 32px rgba(0, 0, 0, 0.16);
+      transition: right 0.4s ease;
+      display: flex;
+      border-left: 1px solid ${(props) =>
+        props.theme.background === "#F5F5F5"
+          ? "rgba(0, 0, 0, 0.08)"
+          : "rgba(255, 255, 255, 0.12)"};
     }
 
     input:checked ~ ul {
-      right: 0; /* Move para dentro da tela */
+      right: 0;
     }
 
     .menu {
       display: block;
     }
+
+    ul li {
+      width: 100%;
+    }
+
+    ul li a {
+      width: 100%;
+    }
   }
-  
-  /* Ajustes para telas menores que 375px */
+
   @media (max-width: 375px) {
     ul {
-      width: 200px; /* Reduzido de 250px para 200px */
-      padding: 1rem; /* Reduzido de 2rem para 1rem */
+      width: min(220px, 78vw);
+      padding: 1rem;
     }
-    
+
     ul li {
-      font-size: 1.1rem; /* Reduzido de 1.25rem para 1.1rem */
-      padding: 0.4rem; /* Reduzido de 0.5rem para 0.4rem */
+      font-size: 1rem;
+      padding: 0.2rem;
     }
   }
-  
-  /* Ajustes específicos para telas de 320px */
+
   @media (max-width: 320px) {
     ul {
-      width: 180px; /* Reduzido de 200px para 180px */
+      width: 180px;
     }
   }
 `;

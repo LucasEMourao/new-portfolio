@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-lucasemourao-projects.vercel.app/sitemap.xml

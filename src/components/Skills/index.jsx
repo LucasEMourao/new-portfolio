@@ -7,7 +7,6 @@ import {
   FaBrain,
   FaNetworkWired,
   FaServer,
-  FaLayerGroup
 } from "react-icons/fa6";
 import { BiLogoTypescript } from "react-icons/bi";
 import { Abilities, AbilityCards, AbilityCard, Info } from "./style";

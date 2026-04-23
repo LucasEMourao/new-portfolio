@@ -10,6 +10,7 @@ const Footer = () => {
           <a
             target="_blank"
             href="https://linkedin.com/in/lucas-eleutherio-mourao"
+            rel="noopener noreferrer"
             aria-label="Visitar meu perfil no LinkedIn"
           >
             <FaLinkedin />
@@ -19,6 +20,7 @@ const Footer = () => {
           <a 
             target="_blank" 
             href="https://github.com/LucasEMourao"
+            rel="noopener noreferrer"
             aria-label="Visitar meu perfil no GitHub"
           >
             <FaGithub />
@@ -28,6 +30,7 @@ const Footer = () => {
           <a 
             target="_blank" 
             href="https://wa.me/5538998656490"
+            rel="noopener noreferrer"
             aria-label="Enviar mensagem no WhatsApp"
           >
             <FaWhatsapp />

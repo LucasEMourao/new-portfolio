@@ -1,17 +1,52 @@
-# Portfólio
-[Deploy](https://portfolio-lucasemourao-projects.vercel.app/)<br>
-Esse projeto pessoal é o meu portfólio, onde eu mostro todos os meus projetos e falo um pouco sobre mim. Espero que goste!
+# Portfolio
 
-## Funcionalidades do site:
-- Um botão para alternar os temas e outro para mostrar o meu CV.
-- Mostro meus projetos principais feitos até aqui
-- Tem os icones clicáveis que direcionam para o meu GitHub, LinkedIn e Whatsapp.
+[Deploy](https://portfolio-lucasemourao-projects.vercel.app/)
 
-## Ferramentas Utilizadas
-- **React.js(Vite)**: Para construção da interface do usuário, no modelo SPA(Single Page Application).
-- **Styled-components**: Estilização do projeto.
-- **Context API**: Alternar entre os temas claro e escuro.
-- **React Router DOM**: Para navegação entre as páginas.
+Portfolio pessoal de Lucas E. Mourao com foco em sistemas, IA aplicada, automacao e produtos web. O projeto apresenta uma homepage de posicionamento, uma secao de habilidades e uma vitrine de cases com destaque para projetos full stack, arquitetura e automacao.
 
-## Desafios, decisões e informações adicionais
-Foi um projeto bem tranquilo onde eu foquei em me apresentar, tentando ao máximo fazer um código limpo e objetivo, o maior "desafio" além de fazer um clean code, foi organizar as pastas e os nomes(quis deixar tudo em inglês para me desafiar e aprimorar cada vez mais meu inglês). Tomei decisões baseadas no que aprendi até aqui, pretendo claro conforme for evoluindo ir aprimorando esse projeto. Espero que gostem e qualquer feedback fiquem a vontade para fazer o Issue, ou me mandarem uma mensagem no LinkedIn e no whatsapp.
+## Destaques
+
+- Hero com narrativa profissional e CTAs para projetos, GitHub e CV
+- Tema claro/escuro com persistencia em `localStorage`
+- Secao de projetos orientada a dados, pronta para escalar
+- Projeto em destaque (`OpenCut`) e grade de cases com UX hibrida no mobile
+- Metadados de SEO, Open Graph, `robots.txt` e `sitemap.xml`
+
+## Stack
+
+- React + Vite
+- React Router DOM
+- Styled Components
+- Framer Motion
+- ESLint
+- vite-plugin-image-optimizer
+
+## Scripts
+
+```bash
+npm run dev
+npm run lint
+npm run build
+npm run preview
+```
+
+## Estrutura
+
+```bash
+src/
+├── assets/
+├── components/
+├── data/
+├── pages/
+├── routes/
+├── style/
+└── themes/
+```
+
+## Publicacao
+
+O projeto esta configurado para deploy na Vercel com fallback de SPA em [vercel.json](./vercel.json).
+
+## Status
+
+Versao atual com `lint` e `build` validados.

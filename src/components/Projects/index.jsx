@@ -1,6 +1,3 @@
-import botflix from "../../assets/images/botflix.png";
-import n8nPipeline from "../../assets/images/n8n-workflow.png";
-import openCut from "../../assets/images/opencut.png";
 import {
   ProjectsMain,
   SectionFeatures,
@@ -10,119 +7,124 @@ import {
   TechList,
   GridTwoColumns,
   ProjectCard,
-  Badge
+  Badge,
 } from "./style";
+import { projects } from "../../data/projects";
 
 const Projects = () => {
+  const featuredProject = projects.find((project) => project.variant === "featured");
+  const secondaryProjects = projects.filter((project) => project.variant === "standard");
+  const getPrimaryLink = (project) => project.href || project.links?.[0]?.href || "#";
+
   return (
     <ProjectsMain>
       <h2>Sistemas & Engenharia</h2>
       <p>
-        Projetos focados em resolver problemas complexos através de Automação,
-        Inteligência Artificial e Arquitetura de Software robusta.
+        Projetos focados em resolver problemas complexos atraves de Automacao,
+        Inteligencia Artificial e Arquitetura de Software robusta.
       </p>
 
       <SectionFeatures>
-        {/* Featured Project: OpenCut */}
-        <FeaturedCard
-          href="https://github.com/LucasEMourao/OpenCut/tree/simplified-editor"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <MediaContainer>
-            <img src={openCut} alt="OpenCut AI Pipeline Diagram" />
-          </MediaContainer>
-          <ContentContainer>
-            <Badge>System Architecture</Badge>
-            <h2>OpenCut: Editor de Vídeo Nativo com IA</h2>
-            <p>
-              A edição de vídeo é 80% corte manual repetitivo. Estendi o OpenCut (via branch <strong>simplified-editor</strong>)
-              criando um pipeline Auto-Cut AI-first que elimina esse trabalho braçal.
-            </p>
-            <p>
-              Diferente de editores web padrão, esta versão customizada utiliza <strong>Bun</strong> para orquestrar
-              processos <strong>FFmpeg nativos</strong> diretamente no host (WSL2), contornando os limites de memória do navegador.
-              O sistema integra a <strong>Gemini File API</strong> para 'assistir' e 'ouvir' a filmagem, gerando listas de corte
-              baseadas em contexto semântico.
-            </p>
-            <TechList>
-              <span>Next.js 15</span>
-              <span>Bun Runtime</span>
-              <span>Native FFmpeg</span>
-              <span>Gemini 2.5 Flash</span>
-              <span>Turborepo</span>
-            </TechList>
-            <div>
-              <a
-                href="https://github.com/LucasEMourao/OpenCut/tree/simplified-editor"
-                target="_blank"
-                rel="noreferrer"
-                style={{ color: 'var(--primary-color)', fontWeight: 'bold', textDecoration: 'none' }}
-              >
-                🔗 Ver Arquitetura no GitHub (Branch simplified-editor)
-              </a>
-            </div>
-          </ContentContainer>
-        </FeaturedCard>
+        {featuredProject && (
+          <FeaturedCard>
+            <a
+              className="featured-image-link"
+              href={featuredProject.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MediaContainer>
+                <img src={featuredProject.image} alt={featuredProject.imageAlt} />
+              </MediaContainer>
+            </a>
+            <ContentContainer>
+              <Badge>{featuredProject.badge}</Badge>
+              <h2>
+                <a
+                  className="featured-title-link"
+                  href={featuredProject.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {featuredProject.title}
+                </a>
+              </h2>
+              {featuredProject.paragraphs.map((paragraph, index) => (
+                <p key={`${featuredProject.id}-paragraph-${index}`}>{paragraph}</p>
+              ))}
+              <TechList>
+                {featuredProject.tags.map((tag) => (
+                  <span key={`${featuredProject.id}-tag-${tag}`}>{tag}</span>
+                ))}
+              </TechList>
+              <div className="featured-links">
+                {featuredProject.links?.map((link) => (
+                  <a
+                    key={`${featuredProject.id}-link-${link.label}`}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </ContentContainer>
+          </FeaturedCard>
+        )}
 
         <GridTwoColumns>
-          {/* Secondary Project: Botflix Pro */}
-          <ProjectCard>
-            <a
-              href="https://github.com/LucasEMourao/botflix-pro"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="image-wrapper">
-                <img src={botflix} alt="Botflix Pro Interface" />
-              </div>
+          {secondaryProjects.map((project) => (
+            <ProjectCard key={project.id}>
+              <a
+                className="image-link"
+                href={getPrimaryLink(project)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="image-wrapper">
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt}
+                    style={project.imageStyle}
+                  />
+                </div>
+              </a>
               <div className="content">
-                <Badge>Product UX & AI Agent</Badge>
-                <h3>Botflix Pro</h3>
-                <p>
-                  Uma plataforma cinematográfica com concierge de IA conversacional.
-                  Desenvolvi um agente com memória de contexto que entende nuances como
-                  "algo inspirador, mas não clichê". Foco total em UX/UI de alto nível
-                  com animações fluidas e layout responsivo.
-                </p>
+                <Badge>{project.badge}</Badge>
+                <h3>
+                  <a
+                    className="title-link"
+                    href={getPrimaryLink(project)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.title}
+                  </a>
+                </h3>
+                <p>{project.description}</p>
                 <TechList>
-                  <span>React</span>
-                  <span>Vite</span>
-                  <span>Typescript</span>
-                  <span>n8n Workflow</span>
+                  {project.tags.map((tag) => (
+                    <span key={`${project.id}-tag-${tag}`}>{tag}</span>
+                  ))}
                 </TechList>
+                {!!project.links?.length && (
+                  <div className="project-links">
+                    {project.links.map((link) => (
+                      <a
+                        key={`${project.id}-link-${link.label}`}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
-            </a>
-          </ProjectCard>
-
-          {/* Tertiary Project: n8n Automator */}
-          <ProjectCard>
-            <a
-              href="https://github.com/LucasEMourao/n8n-nfe-extractor"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="image-wrapper">
-                <img src={n8nPipeline} alt="n8n Invoice Extractor Workflow" style={{ objectFit: 'contain', padding: '1rem', background: '#111' }} />
-              </div>
-              <div className="content">
-                <Badge>Business Automation Impact</Badge>
-                <h3>NFe Automator</h3>
-                <p>
-                  Extração financeira Zero-Touch. Projetei um pipeline que ingere NFs desestruturadas (PDF)
-                  via e-mail. Utilizando <strong>Gemini Vision</strong>, o sistema 'enxerga' o documento
-                  para categorizar impostos e totais, inserindo JSON validado diretamente no banco de dados.
-                  Redução estimada de 95% no tempo manual.
-                </p>
-                <TechList>
-                  <span>n8n Self-hosted</span>
-                  <span>Gemini Vision</span>
-                  <span>Postgres</span>
-                  <span>Gmail API</span>
-                </TechList>
-              </div>
-            </a>
-          </ProjectCard>
+            </ProjectCard>
+          ))}
         </GridTwoColumns>
       </SectionFeatures>
     </ProjectsMain>

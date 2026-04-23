@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import PropTypes from "prop-types";
 import Layout from "../components/Layout";
 
 const Home = lazy(() => import("../pages/Home"));
@@ -21,6 +22,10 @@ const AnimatedPage = ({ children }) => {
   );
 };
 
+AnimatedPage.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 const AppRoutes = () => {
   const location = useLocation();
 
@@ -38,7 +43,7 @@ const AppRoutes = () => {
               }
             />
             <Route
-              path="/Skills"
+              path="/skills"
               element={
                 <AnimatedPage>
                   <Abilities />
@@ -46,7 +51,7 @@ const AppRoutes = () => {
               }
             />
             <Route
-              path="/Projects"
+              path="/projects"
               element={
                 <AnimatedPage>
                   <ProjectsPage />
