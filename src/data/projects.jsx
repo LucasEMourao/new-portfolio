@@ -8,24 +8,24 @@ export const projects = [
     id: "opencut",
     variant: "featured",
     badge: "System Architecture",
-    title: "OpenCut: Editor de Video Nativo com IA",
+    title: "OpenCut: Editor de Vídeo Nativo com IA",
     href: "https://github.com/LucasEMourao/OpenCut/tree/simplified-editor",
     image: openCut,
     imageAlt: "OpenCut AI Pipeline Diagram",
     paragraphs: [
       <>
-        A edicao de video e 80% corte manual repetitivo. Estendi o OpenCut
+        A edição de vídeo é 80% corte manual repetitivo. Estendi o OpenCut
         (via branch <strong>simplified-editor</strong>) criando um pipeline
-        Auto-Cut AI-first que elimina esse trabalho bracal.
+        Auto-Cut AI-first que elimina esse trabalho braçal.
       </>,
       <>
-        Diferente de editores web padrao, esta versao customizada utiliza{" "}
+        Diferente de editores web padrão, esta versão customizada utiliza{" "}
         <strong>Bun</strong> para orquestrar processos{" "}
         <strong>FFmpeg nativos</strong> diretamente no host (WSL2),
-        contornando os limites de memoria do navegador. O sistema integra a{" "}
+        contornando os limites de memória do navegador. O sistema integra a{" "}
         <strong>Gemini File API</strong> para &quot;assistir&quot; e
         &quot;ouvir&quot; a filmagem,
-        gerando listas de corte baseadas em contexto semantico.
+        gerando listas de corte baseadas em contexto semântico.
       </>,
     ],
     tags: [
@@ -49,13 +49,13 @@ export const projects = [
     title: "Syntax Wear",
     href: "https://syntax-wear-app-zeta.vercel.app",
     image: syntaxWear,
-    imageAlt: "Campanha visual da marca Syntax Wear com tenis em destaque",
+    imageAlt: "Campanha visual da marca Syntax Wear com tênis em destaque",
     description: (
       <>
-        E-commerce full stack de calcados com catalogo paginado, detalhe de
-        produto, autenticacao por e-mail e Google, carrinho global e API REST
+        E-commerce full stack de calçados com catálogo paginado, detalhe de
+        produto, autenticação por e-mail e Google, carrinho global e API REST
         documentada. O frontend em <strong>React 19</strong> consome uma API
-        propria em <strong>Fastify + Prisma</strong>, com{" "}
+        própria em <strong>Fastify + Prisma</strong>, com{" "}
         <strong>JWT</strong>, <strong>PostgreSQL</strong> e testes no backend.
       </>
     ),
@@ -96,11 +96,10 @@ export const projects = [
     imageAlt: "Botflix Pro Interface",
     description: (
       <>
-        Uma plataforma cinematografica com concierge de IA conversacional.
-        Desenvolvi um agente com memoria de contexto que entende nuances como
-        &quot;algo inspirador, mas nao cliche&quot;. Foco total em UX/UI de alto
-        nivel
-        com animacoes fluidas e layout responsivo.
+        Uma plataforma cinematográfica com concierge de IA conversacional.
+        Desenvolvi um agente com memória de contexto que entende nuances como
+        &quot;algo inspirador, mas não clichê&quot;. Foco total em UX/UI de alto
+        nível com animações fluidas e layout responsivo.
       </>
     ),
     tags: ["React", "Vite", "Typescript", "n8n Workflow"],
@@ -126,12 +125,12 @@ export const projects = [
     },
     description: (
       <>
-        Extracao financeira Zero-Touch. Projetei um pipeline que ingere NFs
+        Extração financeira Zero-Touch. Projetei um pipeline que ingere NFs
         desestruturadas (PDF) via e-mail. Utilizando{" "}
         <strong>Gemini Vision</strong>, o sistema &quot;enxerga&quot; o
         documento para
         categorizar impostos e totais, inserindo JSON validado diretamente no
-        banco de dados. Reducao estimada de 95% no tempo manual.
+        banco de dados. Redução estimada de 95% no tempo manual.
       </>
     ),
     tags: ["n8n Self-hosted", "Gemini Vision", "Postgres", "Gmail API"],

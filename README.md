@@ -1,15 +1,15 @@
-# Portfolio
+# Portfólio
 
 [Deploy](https://portfolio-lucasemourao-projects.vercel.app/)
 
-Portfolio pessoal de Lucas E. Mourao com foco em sistemas, IA aplicada, automacao e produtos web. O projeto apresenta uma homepage de posicionamento, uma secao de habilidades e uma vitrine de cases com destaque para projetos full stack, arquitetura e automacao.
+Portfólio pessoal de Lucas E. Mourão com foco em sistemas, IA aplicada, automação e produtos web. O projeto apresenta uma homepage de posicionamento, uma seção de habilidades e uma vitrine de cases com destaque para projetos full stack, arquitetura e automação.
 
 ## Destaques
 
 - Hero com narrativa profissional e CTAs para projetos, GitHub e CV
-- Tema claro/escuro com persistencia em `localStorage`
-- Secao de projetos orientada a dados, pronta para escalar
-- Projeto em destaque (`OpenCut`) e grade de cases com UX hibrida no mobile
+- Tema claro/escuro com persistência em `localStorage`
+- Seção de projetos orientada a dados, pronta para escalar
+- Projeto em destaque (`OpenCut`) e grade de cases com UX híbrida no mobile
 - Metadados de SEO, Open Graph, `robots.txt` e `sitemap.xml`
 
 ## Stack
@@ -43,10 +43,10 @@ src/
 └── themes/
 ```
 
-## Publicacao
+## Publicação
 
-O projeto esta configurado para deploy na Vercel com fallback de SPA em [vercel.json](./vercel.json).
+O projeto está configurado para deploy na Vercel com fallback de SPA em [vercel.json](./vercel.json).
 
 ## Status
 
-Versao atual com `lint` e `build` validados.
+Versão atual com `lint` e `build` validados.

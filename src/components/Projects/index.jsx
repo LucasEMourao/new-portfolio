@@ -20,8 +20,8 @@ const Projects = () => {
     <ProjectsMain>
       <h2>Sistemas & Engenharia</h2>
       <p>
-        Projetos focados em resolver problemas complexos atraves de Automacao,
-        Inteligencia Artificial e Arquitetura de Software robusta.
+        Projetos focados em resolver problemas complexos através de automação,
+        inteligência artificial e arquitetura de software robusta.
       </p>
 
       <SectionFeatures>
